@@ -10,6 +10,7 @@ namespace DoAnLTDT
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("hayx hoc ngay di");
         }
     }
 }
