@@ -10,7 +10,13 @@ namespace DoAnLTDT
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("hayx hoc ngay di");
+            string filename = "input.txt";
+           Xuly.KiemTraFile(filename);
+            Xuly.ChuyenDoiMTK(filename);
+            int[] MaTranKe = new int[Xuly.n];
+            Xuly.OutputArray(MaTranKe);
+           
+
         }
     }
 }
