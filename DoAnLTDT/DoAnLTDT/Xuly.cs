@@ -46,8 +46,8 @@ namespace DoAnLTDT
                 
             }
        }
-
-        //code loi
+#region //code loi
+        
         //public static void ChuyenDoiMTK(string filename)
         //{
 
@@ -72,6 +72,7 @@ namespace DoAnLTDT
         //    LuuTruMaTranKe(newDuLieu);
 
         //}
+    #endregion
         //Chuyen doi danh sach ke sang ma tran ke
         public static void ChuyenDoiMTK(string filename)
         {
