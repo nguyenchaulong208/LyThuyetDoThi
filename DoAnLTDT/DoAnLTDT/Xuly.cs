@@ -32,42 +32,20 @@ namespace DoAnLTDT
             using (StreamWriter fileData = new StreamWriter(filePatch))
             {
                 fileData.WriteLine(n);
-                for (int i = 0; i < n; i++)
-                {
-                    for (int j = 0; j < n; j++)
-                        fileData.WriteLine(MaTranKe[i] + " ");
-                    fileData.WriteLine();
-                }
+                
             }
        }
         //Chuyen doi danh sach ke sang ma tran ke
         public static void ChuyenDoiMTK(string filename)
         {
 
-            int[] newMaTranKe = new int[n + 1];
-
-            string[] lines = File.ReadAllLines(filename);
-            for (int i = 0; i < n; i++)
-            {
-                string[] line = lines[i + 1].Split(' ');
-
-                for (int j = 1; j < lines.Length; j = j + 2)
-                {
-                    newMaTranKe[i] = Convert.ToInt32(line[j]);
-                }
-
-            }
-
-            LuuTruMaTranKe(newMaTranKe);
+            
 
         }
-        //output array
+        //check output array
         public static void OutputArray(int[] arr)
         {
-            for(int i = 0; i < arr.Length; i++)
-            {
-                Console.Write(arr[i] + " ");
-            }
+            
         }
     }
 }
