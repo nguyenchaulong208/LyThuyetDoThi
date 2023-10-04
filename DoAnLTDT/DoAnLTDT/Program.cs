@@ -10,11 +10,11 @@ namespace DoAnLTDT
     {
         static void Main(string[] args)
         {
+            
             string filename = "input.txt";
            Xuly.KiemTraFile(filename);
             Xuly.ChuyenDoiMTK(filename);
-            int[] MaTranKe = new int[Xuly.n];
-            Xuly.OutputArray(MaTranKe);
+            Xuly.OutputArray(Xuly.data);
            
 
         }
