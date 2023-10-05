@@ -101,11 +101,46 @@ namespace DoAnLTDT
         //check output array
         public static void OutputArray(int[,] arr)
         {
-            foreach (int i in arr)
+            for(int i = 0; i < n + 1; i++)
             {
-                Console.Write(i);
-                
+                for(int j = 0; j < n + 1; j++)
+                {
+                    Console.Write(arr[i, j] + " ");
+                }
+                Console.WriteLine();
             }
+            
+        }
+        //Kiem tra do thi co huong hay khong
+        public static bool KiemTraDoThi(int[,] arr)
+        {
+            for(int i = 0; i < n + 1; i++)
+            {
+                for(int j = 0; j < n + 1; j++)
+                {
+                    if (arr[i, j] != arr[j, i])
+                    {
+                        return false;
+                    }
+                }
+            }
+            return true;
+        }   
+        //Kiem tra canh khuyen
+        public static int KiemTraCanh(int[,] arr)
+        {
+            int count = 0;
+            for(int i = 0; i < n + 1; i++)
+            {
+                for(int j = 0; j < n + 1; j++)
+                {
+                    if (arr[i, i] != 0)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
             
         }
     }
