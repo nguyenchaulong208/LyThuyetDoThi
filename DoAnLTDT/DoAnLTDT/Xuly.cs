@@ -32,7 +32,7 @@ namespace DoAnLTDT
             var filePatch = Path.GetFullPath(filename);
             using (StreamWriter fileData = new StreamWriter(filePatch))
             {
-                fileData.WriteLine(n + 1);
+                fileData.WriteLine(n);
                 for(int i = 0; i < n + 1; i++)
                 {
                     for (int j = 0; j < n + 1; j++)
@@ -79,7 +79,7 @@ namespace DoAnLTDT
         
         int[,] newDuLieu = new int[n + 1, n + 1];
                 string[] file = File.ReadAllLines(filename);
-            for (int i = 0; i<n; i++)
+            for (int i = 0; i<n+1; i++)
             {
                 string[] tokens = file[i + 1].Split(' ');
 
@@ -99,12 +99,14 @@ namespace DoAnLTDT
 
         }
         //check output array
-        //public static void OutputArray(int[,] arr)
-        //{
-        //    foreach(int i in arr)
-        //    {
-        //        Console.Write(i);
-        //    }
-        //}
+        public static void OutputArray(int[,] arr)
+        {
+            foreach (int i in arr)
+            {
+                Console.Write(i);
+                
+            }
+            
+        }
     }
 }
