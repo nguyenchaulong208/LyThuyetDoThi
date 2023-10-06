@@ -21,21 +21,21 @@ namespace DoAnLTDT
                 return false;
             }
             string[]lines = File.ReadAllLines(filename);
-            n = int.Parse(lines[0]);
+            n = int.Parse(lines[0])+ 1;
             return true;
         }
         //Tao va ghi file moi
         public static void LuuTruMaTranKe(int[,] MaTranKe)
         {
-            data = new int[n +1 , n + 1];
+            data = new int[n +1 ,n];
             var filename = "App Data/data.txt";
             var filePatch = Path.GetFullPath(filename);
             using (StreamWriter fileData = new StreamWriter(filePatch))
             {
                 fileData.WriteLine(n);
-                for(int i = 0; i < n + 1; i++)
+                for(int i = 0; i <n; i++)
                 {
-                    for (int j = 0; j < n + 1; j++)
+                    for (int j = 0; j <n; j++)
                     {
                         data[i, j] = MaTranKe[i, j];
                         fileData.Write(data[i, j]);
@@ -51,7 +51,7 @@ namespace DoAnLTDT
         //public static void ChuyenDoiMTK(string filename)
         //{
 
-        //    int[,] newDuLieu = new int[n + 1, n + 1];
+        //    int[,] newDuLieu = new int[n + 1,n];
         //    string[] file = File.ReadAllLines(filename);
         //    for (int i = 0; i < n; i++)
         //    {
@@ -77,9 +77,9 @@ namespace DoAnLTDT
         public static void ChuyenDoiMTK(string filename)
         {
         
-        int[,] newDuLieu = new int[n + 1, n + 1];
+        int[,] newDuLieu = new int[n + 1,n];
                 string[] file = File.ReadAllLines(filename);
-            for (int i = 0; i<n+1; i++)
+            for (int i = 0; i<n; i++)
             {
                 string[] tokens = file[i + 1].Split(' ');
 
@@ -101,9 +101,9 @@ namespace DoAnLTDT
         //check output array
         public static void OutputArray(int[,] arr)
         {
-            for(int i = 0; i < n + 1; i++)
+            for(int i = 0; i <n; i++)
             {
-                for(int j = 0; j < n + 1; j++)
+                for(int j = 0; j <n; j++)
                 {
                     Console.Write(arr[i, j] + " ");
                 }
@@ -114,9 +114,9 @@ namespace DoAnLTDT
         //Kiem tra do thi co huong hay khong
         public static bool KiemTraDoThi(int[,] arr)
         {
-            for(int i = 0; i < n + 1; i++)
+            for(int i = 0; i <n; i++)
             {
-                for(int j = 0; j < n + 1; j++)
+                for(int j = 0; j <n; j++)
                 {
                     if (arr[i, j] != arr[j, i])
                     {
@@ -130,9 +130,9 @@ namespace DoAnLTDT
         public static int KiemTraCanh(int[,] arr)
         {
             int count = 0;
-            for(int i = 0; i < n + 1; i++)
+            for(int i = 0; i <n; i++)
             {
-                for(int j = 0; j < n + 1; j++)
+                for(int j = 0; j <n; j++)
                 {
                     if (arr[i, i] != 0)
                     {
@@ -147,9 +147,9 @@ namespace DoAnLTDT
         public static int DemCanh(int[,] arr)
         {
             int count = 0;
-            for(int i = 0; i < n + 1; i++)
+            for(int i = 0; i <n; i++)
             {
-                for( int j = 0; j < n+ 1; j++)
+                for( int j = 0; j < n; j++)
                 {
                     if (arr[i,j] == 1)
                     {
