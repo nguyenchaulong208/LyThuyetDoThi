@@ -143,5 +143,32 @@ namespace DoAnLTDT
             return count;
             
         }
+        //Dem so canh do thi
+        public static int DemCanh(int[,] arr)
+        {
+            int count = 0;
+            for(int i = 0; i < n + 1; i++)
+            {
+                for( int j = 0; j < n+ 1; j++)
+                {
+                    if (arr[i,j] == 1)
+                    {
+                        count++;
+                    }
+                }
+            }
+            return count;
+        }
+        //Xac dinh bac cua do thi
+        public static int BacDoThi(int[,] arr)
+        {
+            int count = 0;
+            var check = KiemTraDoThi(arr);
+            if(check == true)
+            {
+                
+            }
+            return count;
+        }
     }
 }
