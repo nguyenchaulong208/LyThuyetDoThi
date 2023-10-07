@@ -99,12 +99,15 @@ namespace DoAnLTDT
 
         }
         //check output array
-        //public static void OutputArray(int[,] arr)
-        //{
-        //    foreach(int i in arr)
-        //    {
-        //        Console.Write(i);
-        //    }
-        //}
+        public static void outputarray(int[,] arr)
+        {
+            foreach (int i in arr)
+            {
+                Console.Write(i);
+            }
+        }
+
+        // chowi e  did a
+
     }
 }
