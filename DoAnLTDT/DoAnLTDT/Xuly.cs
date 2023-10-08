@@ -28,6 +28,7 @@ namespace DoAnLTDT
         public static void LuuTruMaTranKe(int[,] MaTranKe)
         {
             data = new int[n +1 , n + 1];
+
             var filename = "App Data/data.txt";
             var filePatch = Path.GetFullPath(filename);
             using (StreamWriter fileData = new StreamWriter(filePatch))
@@ -99,15 +100,24 @@ namespace DoAnLTDT
 
         }
         //check output array
-        public static void outputarray(int[,] arr)
-        {
-            foreach (int i in arr)
-            {
-                Console.Write(i);
-            }
-        }
+        //public static void outputarray(int[,] arr)
+        //{
+        //    foreach (int i in arr)
+        //    {
+        //        Console.Write(i);
+        //    }
+        //}
 
-        // chowi e  did a
+    //    // TẠO DỰNG MẢNG 2 CHIỀU BAN ĐẦU
+    //    public static int[,] DT_LK_TS(int[,] arr)
+    //    {
+    //        int[,] DT_LK_TS=new int[n+1, n+1];
+    //        foreach (var k in arr)
+    //        {
+    //             = 0;
+    //        }
+    //        return arr;
+    //    }
 
     }
 }
