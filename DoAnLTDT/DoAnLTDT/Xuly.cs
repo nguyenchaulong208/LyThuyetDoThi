@@ -21,21 +21,22 @@ namespace DoAnLTDT
                 return false;
             }
             string[]lines = File.ReadAllLines(filename);
-            n = int.Parse(lines[0])+ 1;
+            n = int.Parse(lines[0]);
             return true;
         }
         //Tao va ghi file moi
         public static void LuuTruMaTranKe(int[,] MaTranKe)
         {
-            data = new int[n +1 ,n];
+            data = new int[n +1 , n + 1];
+
             var filename = "App Data/data.txt";
             var filePatch = Path.GetFullPath(filename);
             using (StreamWriter fileData = new StreamWriter(filePatch))
             {
-                fileData.WriteLine(n);
-                for(int i = 0; i <n; i++)
+                fileData.WriteLine(n + 1);
+                for(int i = 0; i < n + 1; i++)
                 {
-                    for (int j = 0; j <n; j++)
+                    for (int j = 0; j < n + 1; j++)
                     {
                         data[i, j] = MaTranKe[i, j];
                         fileData.Write(data[i, j]);
@@ -51,7 +52,7 @@ namespace DoAnLTDT
         //public static void ChuyenDoiMTK(string filename)
         //{
 
-        //    int[,] newDuLieu = new int[n + 1,n];
+        //    int[,] newDuLieu = new int[n + 1, n + 1];
         //    string[] file = File.ReadAllLines(filename);
         //    for (int i = 0; i < n; i++)
         //    {
@@ -77,7 +78,7 @@ namespace DoAnLTDT
         public static void ChuyenDoiMTK(string filename)
         {
         
-        int[,] newDuLieu = new int[n + 1,n];
+        int[,] newDuLieu = new int[n + 1, n + 1];
                 string[] file = File.ReadAllLines(filename);
             for (int i = 0; i<n; i++)
             {
@@ -99,76 +100,24 @@ namespace DoAnLTDT
 
         }
         //check output array
-        public static void OutputArray(int[,] arr)
-        {
-            for(int i = 0; i <n; i++)
-            {
-                for(int j = 0; j <n; j++)
-                {
-                    Console.Write(arr[i, j] + " ");
-                }
-                Console.WriteLine();
-            }
-            
-        }
-        //Kiem tra do thi co huong hay khong
-        public static bool KiemTraDoThi(int[,] arr)
-        {
-            for(int i = 0; i <n; i++)
-            {
-                for(int j = 0; j <n; j++)
-                {
-                    if (arr[i, j] != arr[j, i])
-                    {
-                        return false;
-                    }
-                }
-            }
-            return true;
-        }   
-        //Kiem tra canh khuyen
-        public static int KiemTraCanh(int[,] arr)
-        {
-            int count = 0;
-            for(int i = 0; i <n; i++)
-            {
-                for(int j = 0; j <n; j++)
-                {
-                    if (arr[i, i] != 0)
-                    {
-                        count++;
-                    }
-                }
-            }
-            return count;
-            
-        }
-        //Dem so canh do thi
-        public static int DemCanh(int[,] arr)
-        {
-            int count = 0;
-            for(int i = 0; i <n; i++)
-            {
-                for( int j = 0; j < n; j++)
-                {
-                    if (arr[i,j] == 1)
-                    {
-                        count++;
-                    }
-                }
-            }
-            return count;
-        }
-        //Xac dinh bac cua do thi
-        public static int BacDoThi(int[,] arr)
-        {
-            int count = 0;
-            var check = KiemTraDoThi(arr);
-            if(check == true)
-            {
-                
-            }
-            return count;
-        }
+        //public static void outputarray(int[,] arr)
+        //{
+        //    foreach (int i in arr)
+        //    {
+        //        Console.Write(i);
+        //    }
+        //}
+
+    //    // TẠO DỰNG MẢNG 2 CHIỀU BAN ĐẦU
+    //    public static int[,] DT_LK_TS(int[,] arr)
+    //    {
+    //        int[,] DT_LK_TS=new int[n+1, n+1];
+    //        foreach (var k in arr)
+    //        {
+    //             = 0;
+    //        }
+    //        return arr;
+    //    }
+
     }
 }
